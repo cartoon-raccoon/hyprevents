@@ -1,0 +1,24 @@
+[general]
+dispatcher-dir = "./dispatchers"
+loaded = ["duckypad"]
+
+# Settings for the autoswitch dispatcher
+[duckypad]
+subscribes = ["activewindow", "custom"]
+default = "General"
+active = { switching = false, sleep = true }
+sleep-ev = { event = "custom", data = { sleep = "sleep", wake = "wake"} }
+
+# mapping of window classes to profiles.
+[duckypad.mappings]
+# class = { title = profile-name }
+firefox = "Firefox"
+code = "Code"
+nemo = "File Manager"
+discord = "Discord"
+obsidian = "Obsidian"
+evince = "Evince"
+
+[workspaceswap]
+subscribes = ["custom", "focusedmon", "workspace", "moveworkspacev2"]
+swap-ev = { event = "custom", data = "movewkspc:([0-9]+)" }
