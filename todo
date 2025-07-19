@@ -1,0 +1,7 @@
+Overall:
+- Add udev monitor
+- Make modules hot-reloadable
+
+Duckypad:
+- Account for sleep events when unplugged
+- Do not crash out when unplugged

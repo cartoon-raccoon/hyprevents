@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import logging
@@ -14,7 +16,7 @@ from hyprevents.notifications import HyprlandNotifType as Notif
 from hyprevents.dispatcher import Dispatcher
 
 logger = logging.getLogger()
-logger.setLevel(logging.WARNING)
+logger.setLevel(logging.DEBUG)
 
 HOME_DIR = os.environ["HOME"]
 CONFIG_DIR = f"{HOME_DIR}/.config/hyprevents"
